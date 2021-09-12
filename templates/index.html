@@ -5,6 +5,13 @@
 </head>
 <body>
     <h1>Welcome</h1>
-    <p>Request: {{ request }}</p>
+    <p>Request:</p>
+    <ul>
+      <li>Headers: {{request.headers}}</li>
+      <li>Query params: {{request.query_params}}</li>
+      <li>Client host: {{request.client.host}}</li>
+      <li>Cookies: {request.cookies}</li>
+    </ul>
+
 </body>
 </html>
