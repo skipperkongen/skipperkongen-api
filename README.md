@@ -7,13 +7,21 @@ Run local:
 gunicorn -w 4 -k uvicorn.workers.UvicornWorker main:app
 ```
 
-Online:
+View online:
 
 ```
 curl https://skipperkongen.herokuapp.com/
 ```
 
-## Using this deploy method
+## Logs
+
+Via CLI:
+
+```
+heroku logs -a skipperkongen
+```
+
+## Deploy
 
 > https://youtu.be/H7zAJf20Moc
 

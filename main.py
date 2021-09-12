@@ -1,9 +1,11 @@
 import os
 
 from fastapi import FastAPI
+from fastapi.staticfiles import StaticFiles
 import redis
 
 app = FastAPI()
+app.mount("/static", StaticFiles(directory="static"), name="static")
 
 @app.get("/")
 def home():
