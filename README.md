@@ -13,15 +13,21 @@ View online:
 curl https://skipperkongen.herokuapp.com/
 ```
 
-## Logs
+## Heroku stuff
 
-Via CLI:
+First:
+
+```
+heroku login
+```
+
+View CLI:
 
 ```
 heroku logs -a skipperkongen
 ```
 
-## Deploy
+## Deploying
 
 > https://youtu.be/H7zAJf20Moc
 
