@@ -7,6 +7,12 @@ View online:
 curl https://skipperkongen.herokuapp.com/
 ```
 
+View logs:
+
+```
+heroku logs --tail --app skipperkongen
+```
+
 ## Run locally
 
 Start server:
