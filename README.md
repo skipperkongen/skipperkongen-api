@@ -1,16 +1,33 @@
 # skipperkongen-api
 An API
 
-Run local:
-
-```
-gunicorn -w 4 -k uvicorn.workers.UvicornWorker main:app
-```
-
 View online:
 
 ```
 curl https://skipperkongen.herokuapp.com/
+```
+
+## Run locally
+
+Start server:
+
+```
+uvicorn main:app --reload
+```
+
+Authorize johndoe:
+```bash
+curl -d 'grant_type=password&username=johndoe&password=secret' localhost:8000/token
+# OR
+curl -d 'grant_type=password&username=alice&password=secret2' localhost:8000/token
+
+# Returns a Token...
+```
+
+Get secured resource:
+
+```bash
+  curl localhost:8000/users/me/items/ -H 'Authorization: Bearer TOKEN_FROM_ABOVE'
 ```
 
 ## Heroku stuff
